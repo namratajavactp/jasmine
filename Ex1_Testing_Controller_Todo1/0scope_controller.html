@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <title>Hello World, AngularJS </title>
+    
+  <!--  <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>  -->
+
+  <!--  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script> -->
+    <script src="angular.min.js"></script>
+    <script src="controller.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="ContactController">
+
+
+    <h2>{{ myname }}</h2>
+    <h> {{store.name}}</h>
+    <h>{{store.price|currency}}</h>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+We have two tests in the example above. 
+The first test:
+1. Opens up the main page of the Teams Application.
+2. Fetches all the rows by using the repeater, and then checks if there are 5 rows present on the main page.
+3. Fetches the name and rank of the first row and asserts that they are as expected.
+4. Fetches the name and rank of the last row and asserts that they are as expected.
+5. Checks that the login link is shown and the logout link is hidden.
+
+Thus, the first test purely is dealing with rendering and logic, to ensure that the application is correctly hooked up to the server and is capable of fetching the displaying the content correctly.
+
+The second test deals with user interaction by:
+1. Opening up the login page.
+2. Entering the username and password to the correct model.
+3. Clicking the login button by CSS selector.
+4. Ensuring that the login is successful by checking the URL of the redirected page.
+5. Check that the login link is hidden and the logout link is shown.
+
+Notice that in none of the tests, we added any wait conditions. We wrote the test as if a user would be interacting with the application, and let AngularJS and Protractor worry about when to proceed with the test.
+
+To execute this test, execute the following in order
+1. If the server is not running, run node server.js from the folder appUnderTest. You might need to run npm install from that folder first.
+2. If Selenium is not up and running, run webdriver-manager start
+3. Run protractor protractor.conf.js from the folder containing the config file and the specs.

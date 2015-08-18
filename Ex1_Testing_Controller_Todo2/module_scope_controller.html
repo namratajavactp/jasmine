@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World, AngularJS </title>
+<!--    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>  -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+    <script src="GreetController.js"></script>
+</head>
+<body ng-app="myapp">
+
+<div ng-controller="GreetController">
+    Greet:<input type="text" ng-model="myname"/>
+
+    <button ng-click="greet()">Greet</button>
+
+    <button ng-click="clear()">Clear</button>
+
+    <h2>  {{ myname1 }}   </h2>
+
+</div>
+</body>
+</html>
